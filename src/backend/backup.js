@@ -7,13 +7,11 @@ function copyFileSync(source, target) {
 }
 
 function copyFolderRecursiveSync(source, target) {
-    // Se a fonte for um arquivo, apenas copie o arquivo.
     if (fs.lstatSync(source).isFile()) {
         copyFileSync(source, target);
         return;
     }
 
-    // Se a fonte for um diretório, copie tudo dentro dele.
     if (!fs.existsSync(target)) {
         fs.mkdirSync(target, { recursive: true });
     }

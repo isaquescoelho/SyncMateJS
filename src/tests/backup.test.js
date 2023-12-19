@@ -3,19 +3,19 @@ const path = require('path');
 const { expect } = require('chai');
 const { copyFileSync } = require('../backend/backup');
 
-describe('Teste de Cópia de Arquivos', function() {
+describe('File copy test', function() {
     const sourceFile = path.join(__dirname, 'testFile.txt');
     const targetDir = path.join(__dirname, 'testDir');
     const targetFile = path.join(targetDir, 'testFile.txt');
 
     before(function() {
-        fs.writeFileSync(sourceFile, 'conteúdo de teste');
+        fs.writeFileSync(sourceFile, 'test content');
         if (!fs.existsSync(targetDir)){
             fs.mkdirSync(targetDir);
         }
     });
 
-    it('deve copiar arquivo de A para B', function() {
+    it('must copy file from A to B', function() {
         copyFileSync(sourceFile, targetDir);
         expect(fs.existsSync(targetFile)).to.be.true;
     });
