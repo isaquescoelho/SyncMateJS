@@ -15,3 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Source directory selected:', sourceDirectory);
         }
     });
+
+    startBackupButton.addEventListener('click', () => {
+        if (sourceDirectory) {
+            ipcRenderer.send('start-backup', sourceDirectory);
+            logContainer.innerText = 'Starting backup...';
+        } else {
+            logContainer.innerText = 'Please select a source directory.';
+        }
+    });
+
+    ipcRenderer.on('backup-complete', (event, message) => {
+        logContainer.innerText = message;
+    });
+
+    ipcRenderer.on('backup-error', (event, message) => {
+        logContainer.innerText = message;
+    });
+});
