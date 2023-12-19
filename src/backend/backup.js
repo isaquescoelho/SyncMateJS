@@ -30,3 +30,8 @@ function copyFolderRecursiveSync(source, target) {
         }
     });
 }
+
+module.exports = {
+    copyFolderRecursiveSync,
+    copyFileSync
+};
