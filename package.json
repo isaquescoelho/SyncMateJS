@@ -1,0 +1,32 @@
+{
+  "name": "syncmatejs",
+  "version": "1.0.0",
+  "description": "SyncMateJS: Uma solução de backup e sincronização de dados eficiente e intuitiva, construída com JavaScript e Node.js. Ideal para automação de backups locais e em nuvem com uma interface gráfica amigável.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "mocha 'src/tests/**/*.test.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaquescoelho/SyncMateJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaquescoelho/SyncMateJS/issues"
+  },
+  "homepage": "https://github.com/isaquescoelho/SyncMateJS#readme",
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1",
+    "express": "^4.18.2",
+    "node-schedule": "^2.1.1",
+    "node-watch": "^0.7.4"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "electron": "^28.0.0",
+    "mocha": "^10.2.0"
+  }
+}
