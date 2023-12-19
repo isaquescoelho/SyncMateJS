@@ -23,7 +23,6 @@ function createWindow() {
     });
 
     mainWindow.loadFile(path.join('src', 'ui', 'index.html'));
-    mainWindow.webContents.openDevTools(); // Remova esta linha em produção
 }
 
 app.on('ready', createWindow);
