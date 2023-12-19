@@ -40,3 +40,11 @@ app.on('activate', () => {
     }
 });
 
+ipcMain.on('start-backup', (event, sourcePath) => {
+    try {
+        copyFolderRecursiveSync(sourcePath, defaultBackupPath);
+        event.reply('backup-complete', `Backup concluído com sucesso para: ${defaultBackupPath}`);
+    } catch (error) {
+        event.reply('backup-error', `Erro no backup: ${error.message}`);
+    }
+});
