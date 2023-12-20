@@ -18,15 +18,15 @@ Before installing SyncMateJS, ensure you have [Node.js](https://nodejs.org/) ins
 
 1. Clone the SyncMateJS repository to your local machine:
 
-´´´bash
+```bash
     git clone https://github.com/isaquescoelho/SyncMateJS
-´´´
+```
 
 2. Navigate to the SyncMateJS directory:
 
-´´´bash
+```bash
     cd yourpath/SyncMateJS
-´´´
+```
 
 3. Install the dependencies:
 - Using npm:
